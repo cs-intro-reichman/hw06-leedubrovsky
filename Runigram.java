@@ -46,11 +46,11 @@ public class Runigram {
 		//// Replace the following statement with your code.
 		for (int i = 0; i < numRows; i++){
 			for (int j = 0; j < numCols; j++){
-				int R = in.readInt();
-				int G = in.readInt();
-				int B = in.readInt();
+				int r = in.readInt();
+				int g = in.readInt();
+				int b = in.readInt();
 
-				image[i][j] = new Color (R,G,B);
+				image[i][j] = new Color (r, g, b);
 
 			}
 
@@ -128,7 +128,7 @@ public class Runigram {
 		double r = 0.299 * pixel.getRed();
 		double g = 0.587 * pixel.getGreen();
 		double b = 0.114 * pixel.getBlue();
-		int lum = (int)(r + g + b);
+		int lum = ((int)(r + g + b));
 		Color lumPixel = new Color(lum, lum, lum);
 
 		return lumPixel;
@@ -195,7 +195,7 @@ public class Runigram {
 		//// Replace the following statement with your code
 		Color [][] blendedImage = new Color[image1.length][image1[0].length];
 		for (int i = 0; i < image1.length; i++){
-			for(int j = 0; j < image1[i].length; j++){
+			for(int j = 0; j < image1[0].length; j++){
 				blendedImage[i][j] = blend(image1[i][j], image2[i][j], alpha);
 			}
 		}
